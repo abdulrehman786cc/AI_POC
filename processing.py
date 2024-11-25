@@ -56,10 +56,10 @@ def get_similarities_with_llm(new_name, existing_names):
     # Return list of similarities
     result = [(name, round(similarity, 2)) for name, similarity in zip(existing_names, similarities)]
     result =  sorted(result, key=lambda x: x[1], reverse=True)[:2]
-    if float(result[0][1]) >= 0.9:
-         return (f"Relevant name exits: {result[0][0]} , Percentage Score: {round(result[0][1],2)}")
+    if float(result[0][1]) >= 0.5:
+         return (f"Relevant name exits: {result[0][0]} , Percentage Score: {round(float(result[0][1]),2)}")
     else:
-        return (f"Name can be used: {result[0][0]} , Percentage Score: {round(result[0][1],2)}")
+        return (f"Name can be used: {result[0][0]} , Percentage Score: {round(float(result[0][1]),2)}")
 
 
 
