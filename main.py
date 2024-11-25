@@ -34,7 +34,7 @@ Data_Base_Names = {
 ],
 }
 Prohibited_Words = {
-    "prohibited_words": ["army", "bank", "police", "government","unauthorized"],
+    "prohibited_words": ["bank", "police", "government","unauthorized"],
 }
 
 df1 = pd.DataFrame(Data_Base_Names)

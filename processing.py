@@ -30,7 +30,7 @@ def standardize_name_with_llm(name):
         return name  # Fall back to the original name if API call fails
 
 
-prohibited_words = ["army", "bank", "police", "government","unauthorized"]
+prohibited_words = ["bank", "police", "government","unauthorized"]
 def get_similarities_with_llm(new_name, existing_names):
     if new_name=="":
         return ""
