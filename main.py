@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from sentence_transformers import SentenceTransformer
 import processing
 
 Data_Base_Names = {
@@ -48,7 +47,7 @@ st.header("Enter Company Name:")
 user_input = st.text_input("", "")  # Empty label to avoid duplicate text
 # Output field
 st.header("Matching Result:")
-output_text = st.text_area("",value=processing.get_similarities_with_llm(user_input,df1['names'].to_list()), height=68)
+output_text = st.text_area("",value=processing.get_similarities(user_input,df1['names'].to_list()), height=160)
 
 # Display DataFrames side by side
 col1, col2 = st.columns(2)
