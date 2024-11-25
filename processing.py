@@ -59,7 +59,7 @@ def get_similarities_with_llm(new_name, existing_names):
     if float(result[0][1]) >= 0.5:
          return (f"Relevant name exits: {result[0][0]} , Percentage Score: {round(float(result[0][1]),2)}")
     else:
-        return (f"Name can be used: {result[0][0]} , Percentage Score: {round(float(result[0][1]),2)}")
+        return ("Name can be used")
 
 
 
